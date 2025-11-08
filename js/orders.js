@@ -47,6 +47,9 @@ function loadTable(){
     let tbl1=document.getElementById("tblStudent");
     document.getElementById("h2").innerText="View Order Details"
 
+    let localStorageItemlist=localStorage.getItem("OrderList");
+    console.log(JSON.parse(localStorageItemlist));
+
     let body=`
     <tr>
         <th>Reseller Name</th>
@@ -59,8 +62,6 @@ function loadTable(){
         <th>Your Price</th>
     </tr>
     `
-    let localStorageItemlist=localStorage.getItem("OrderList");
-    console.log(JSON.parse(localStorageItemlist));
 
     let localitem=JSON.parse(localStorageItemlist)
 
