@@ -59,7 +59,12 @@ function loadTable(){
         <th>Your Price</th>
     </tr>
     `
-    OrderList.forEach(Order => {
+    let localStorageItemlist=localStorage.getItem("OrderList");
+    console.log(JSON.parse(localStorageItemlist));
+
+    let localitem=JSON.parse(localStorageItemlist)
+
+    localitem.forEach(Order => {
         body+=`
         <tr>
             <td>${Order.Rname}</td>
