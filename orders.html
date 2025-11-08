@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Order</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Reseller Name:</td>
+            <td><input type="text"  id="txtResellername" placeholder="Reseller Name"></td>
+        </tr>
+         <tr>
+            <td>Customer Name:</td>
+            <td><input type="text"  id="txtCustomerName" placeholder="Customer Name"></td>
+        </tr>
+         <tr>
+            <td>Item Name:</td>
+            <td><input type="text"  id="txtItemname" placeholder="Item Name"></td>
+        </tr>
+         <tr>
+            <td>Item Quantity:</td>
+            <td><input type="text"  id="txtQuantity" placeholder="Quantity"></td>
+        </tr>
+         <tr>
+            <td>Phone Number:</td>
+            <td><input type="text"  id="txtNumber" placeholder="Phone Number"></td>
+        </tr>
+         <tr>
+            <td>Address:</td>
+            <td><input type="text"  id="txtAddress" placeholder="Address"></td>
+        </tr>
+         <tr>
+            <td>Item Price:</td>
+            <td><input type="text"  id="txtPrice" placeholder="Price"></td>
+        </tr>
+
+         <tr>
+            <td>Your Price:</td>
+            <td><input type="text"  id="txtYourPrice" placeholder="Price"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Add Order" id="btnAddorder" onclick="addOrder()"></td>
+        </tr>
+    </table>
+
+    <hr>
+    <h1>View Order Details</h1>
+    <table id="tblStudent">
+
+    </table>
+    <script src="orders.js"></script>
+</body>
+</html>
