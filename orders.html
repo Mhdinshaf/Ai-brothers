@@ -4,52 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Order</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>    
 </head>
 <body>
-    <table>
-        <tr>
-            <td>Reseller Name:</td>
-            <td><input type="text"  id="txtResellername" placeholder="Reseller Name"></td>
-        </tr>
-         <tr>
-            <td>Customer Name:</td>
-            <td><input type="text"  id="txtCustomerName" placeholder="Customer Name"></td>
-        </tr>
-         <tr>
-            <td>Item Name:</td>
-            <td><input type="text"  id="txtItemname" placeholder="Item Name"></td>
-        </tr>
-         <tr>
-            <td>Item Quantity:</td>
-            <td><input type="text"  id="txtQuantity" placeholder="Quantity"></td>
-        </tr>
-         <tr>
-            <td>Phone Number:</td>
-            <td><input type="text"  id="txtNumber" placeholder="Phone Number"></td>
-        </tr>
-         <tr>
-            <td>Address:</td>
-            <td><input type="text"  id="txtAddress" placeholder="Address"></td>
-        </tr>
-         <tr>
-            <td>Item Price:</td>
-            <td><input type="text"  id="txtPrice" placeholder="Price"></td>
-        </tr>
+    <div class="container py-5">
+        
+        <div class="card text-bg-primary mb-3 shadow-lg mx-auto" style="max-width: 35rem;">
+            <div class="card-header text-center">
+                <h4 class="mb-0"> Add Order Entry</h4>
+            </div>
+            <div class="card-body bg-white text-dark rounded-bottom">
+                <form>
+                    <div class="mb-3">
+                        <label for="txtResellername" class="form-label">Reseller Name:</label>
+                        <input type="text" class="form-control" id="txtResellername" placeholder="Reseller Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txtCustomerName" class="form-label">Customer Name:</label>
+                        <input type="text" class="form-control" id="txtCustomerName" placeholder="Customer Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txtItemname" class="form-label">Item Name:</label>
+                        <input type="text" class="form-control" id="txtItemname" placeholder="Item Name">
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="txtQuantity" class="form-label">Item Quantity:</label>
+                            <input type="text" class="form-control" id="txtQuantity" placeholder="Quantity">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="txtNumber" class="form-label">Phone Number:</label>
+                            <input type="text" class="form-control" id="txtNumber" placeholder="Phone Number">
+                        </div>
+                    </div>
 
-         <tr>
-            <td>Your Price:</td>
-            <td><input type="text"  id="txtYourPrice" placeholder="Price"></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="Add Order" id="btnAddorder" onclick="addOrder()"></td>
-        </tr>
-    </table>
+                    <div class="mb-3">
+                        <label for="txtAddress" class="form-label">Address:</label>
+                        <input type="text" class="form-control" id="txtAddress" placeholder="Address">
+                    </div>
 
-    <hr>
-    <h1>View Order Details</h1>
-    <table id="tblStudent">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="txtPrice" class="form-label">Item Price:</label>
+                            <input type="text" class="form-control" id="txtPrice" placeholder="Item Price">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="txtYourPrice" class="form-label">Your Price:</label>
+                            <input type="text" class="form-control" id="txtYourPrice" placeholder="Your Price">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+            
+        <div class="d-grid gap-2 mx-auto mt-4" style="max-width: 35rem;">
+            <button type="button" class="btn btn-primary btn-lg" onclick="addOrder()">Add Order</button>
+        </div>
 
-    </table>
-    <script src="orders.js"></script>
+        <hr class="my-5">
+        
+        <h2 id="h2" class="text-center mb-4"></h2>
+        <div class="table-responsive">
+            <table id="tblStudent" class="table table-striped table-hover table-bordered shadow-sm">
+                </table>
+        </div>
+
+    </div>
+
+        <script src="js/orders.js"></script>
 </body>
 </html>

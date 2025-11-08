@@ -36,20 +36,43 @@ function addOrder(){
     OrderList.push(Order)
 
     console.log(OrderList)
+    
+    localStorage.setItem("OrderList",JSON.stringify(OrderList));
+
+    loadTable();
 
 }
 
 function loadTable(){
     let tbl1=document.getElementById("tblStudent");
-    let body=
+    document.getElementById("h2").innerText="View Order Details"
+
+    let body=`
     <tr>
         <th>Reseller Name</th>
         <th>Customer Name</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
+        <th>Item Name</th>
+        <th>Quantity</th>
+        <th>Phone Number</th>
+        <th>Address</th>
+        <th>Price</th>
+        <th>Your Price</th>
     </tr>
+    `
+    OrderList.forEach(Order => {
+        body+=`
+        <tr>
+            <td>${Order.Rname}</td>
+            <td>${Order.Cname}</td>
+            <td>${Order.Iname}</td>
+            <td>${Order.quantity}</td>
+            <td>${Order.pnumber}</td>
+            <td>${Order.CAddress}</td>
+            <td>${Order.Cprice}</td>
+            <td>${Order.Yprice}</td>
+        </tr>
+        `
+    })
+    
+    tbl1.innerHTML=body;
 }
